@@ -33,9 +33,10 @@
                 <input type="hidden" name="id" value="<c:out value='${user.id}' />"/>
             </c:if>
 
-            <label>First Name</label> <input type="text" value="<c:out value='${user.firstName}' />" name="firstName"> <br>
-            <label>Second Name</label> <input type="text" value="<c:out value='${user.secondName}' />" name="secondName"> <br>
-            <label>Age</label> <input type="text" value="<c:out value='${user.age}' />" name="age"> <br><br>
+            <label>First Name</label> <input type="text" value="<c:out value='${user.firstName}' />" name="firstName" required="required"> <br>
+            <label>Second Name</label> <input type="text" value="<c:out value='${user.secondName}' />" name="secondName" required="required"> <br>
+            <label>Age</label> <input type="text" value="<c:out value='${user.age}' />" name="age" required="required"> <br>
+            <label>Email</label> <input type="text" value="<c:out value='${user.email}' />" name="email" required="required"> <br><br>
 
         <button type="submit" class="addUpdateButton">Save</button>
     </form>

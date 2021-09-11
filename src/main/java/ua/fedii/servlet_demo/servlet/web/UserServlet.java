@@ -78,7 +78,8 @@ public class UserServlet extends HttpServlet {
         String firstName = request.getParameter("firstName");
         String secondName = request.getParameter("secondName");
         int age = Integer.parseInt(request.getParameter("age"));
-        User newUser = new User(firstName, secondName, age);
+        String email = request.getParameter("email");
+        User newUser = new User(firstName, secondName, age, email);
         userDAO.insertUser(newUser);
         response.sendRedirect("list");
     }
@@ -88,7 +89,8 @@ public class UserServlet extends HttpServlet {
         String firstName = request.getParameter("firstName");
         String secondName = request.getParameter("secondName");
         int age = Integer.parseInt(request.getParameter("age"));
-        User updateUser = new User(id, firstName, secondName, age);
+        String email = request.getParameter("email");
+        User updateUser = new User(id, firstName, secondName, age, email);
         userDAO.updateUser(updateUser);
         response.sendRedirect("list");
     }

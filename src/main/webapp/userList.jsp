@@ -22,6 +22,7 @@
                 <th>First Name</th>
                 <th>Second Name</th>
                 <th>Age</th>
+                <th>Email</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -33,6 +34,7 @@
                     <td><c:out value="${user.firstName}" /></td>
                     <td><c:out value="${user.secondName}" /></td>
                     <td><c:out value="${user.age}" /></td>
+                    <td><c:out value="${user.email}" /></td>
                     <td><a href="edit?id=<c:out value='${user.id}' />">Edit</a>
                         <a href="delete?id=<c:out value='${user.id}' />">Delete</a></td>
                 </tr>
