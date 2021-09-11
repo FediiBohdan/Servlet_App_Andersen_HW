@@ -5,10 +5,14 @@ import ua.fedii.servlet_demo.servlet.model.User;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,10 +21,21 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/")
 public class UserServlet extends HttpServlet {
     private UserDAOIml userDAO;
+    //private final Map<String, Command> commandMap = new HashMap<>();
 
+    @Override
     public void init() {
         userDAO = new UserDAOIml();
-    }
+//        super.init();
+//        commandMap.put("select", new SelectUser());
+//        commandMap.put("insert", new InsertUser());
+//        commandMap.put("update", new UpdateUser());
+//        commandMap.put("delete", new DeleteUser());
+   }
+
+//    @Override
+//    public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//    }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
@@ -99,6 +114,12 @@ public class UserServlet extends HttpServlet {
         long id = Long.parseLong(request.getParameter("id"));
         userDAO.deleteUser(id);
         response.sendRedirect("list");
+    }
+
+    @Override
+    public void destroy() {
+        System.out.println("Servlet was destroyed!");
+        super.destroy();
     }
 
 }

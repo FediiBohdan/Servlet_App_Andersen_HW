@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
     <head>
-    </head>
+        <title>User list</title></head>
 <body>
 
 <div class="userList">
