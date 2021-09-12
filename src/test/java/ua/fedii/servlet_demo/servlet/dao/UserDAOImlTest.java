@@ -28,8 +28,8 @@ public class UserDAOImlTest {
 
     @Test
     public void selectUser() {
-        User actualUser = userDAO.selectUser(20);
-        User expectedUser = new User(20, "Linda", "Gregor", 43, "lind@mail.net");
+        User actualUser = userDAO.selectUser(3);
+        User expectedUser = new User(3, "Linda", "Gregor", 43, "lind@mail.net");
 
         Assertions.assertEquals(expectedUser, actualUser);
     }
@@ -40,9 +40,9 @@ public class UserDAOImlTest {
 
     @Test
     public void updateUser() {
-        User expectedUpdatedUser = new User(21, "Mike", "Owl", 76, "j_buyer@gmail.com");
+        User expectedUpdatedUser = new User(4, "Mike", "Owl", 76, "owwwwl_mike@gmail.co");
         userDAO.updateUser(expectedUpdatedUser);
-        User actualUpdatedUser = userDAO.selectUser(21);
+        User actualUpdatedUser = userDAO.selectUser(4);
 
         Assertions.assertEquals(expectedUpdatedUser, actualUpdatedUser);
     }

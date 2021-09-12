@@ -14,7 +14,7 @@ public class DataBaseConnection {
         try {
             String jdbcDriver = "org.postgresql.Driver";
             Class.forName(jdbcDriver);
-            String jdbcURL = "jdbc:postgresql://localhost:5432/userdb";
+            String jdbcURL = "jdbc:postgresql://192.168.56.103:5432/userdb";
             String jdbcUsername = "postgres";
             String jdbcPassword = "321987z";
             connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
