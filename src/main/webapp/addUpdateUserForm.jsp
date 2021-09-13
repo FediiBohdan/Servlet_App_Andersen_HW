@@ -8,7 +8,7 @@
 
 <header>
     <div class="backToUserList">
-        <a href="<%=request.getContextPath()%>/list">Users</a>
+        <a href="<%=request.getContextPath()%>/userList">Users</a>
     </div>
 </header>
 
