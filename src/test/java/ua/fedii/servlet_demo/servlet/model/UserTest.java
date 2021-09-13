@@ -1,14 +1,12 @@
 package ua.fedii.servlet_demo.servlet.model;
 
 import org.junit.*;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 
 public class UserTest {
     private static User user;
 
-    @BeforeAll
+    @BeforeClass
     public static void userInitialization() {
         user = new User("Al", "Pacino", 40, "mail@mail.ua");
     }
@@ -41,7 +39,7 @@ public class UserTest {
         Assertions.assertEquals(expectedEmail, actualEmail);
     }
 
-    @AfterAll
+    @AfterClass
     public static void clearUserState()
     {
         user = null;

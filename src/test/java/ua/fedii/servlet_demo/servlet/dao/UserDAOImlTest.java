@@ -1,7 +1,7 @@
 package ua.fedii.servlet_demo.servlet.dao;
 
+import org.junit.Ignore;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import ua.fedii.servlet_demo.servlet.email_exception.EmailException;
 import ua.fedii.servlet_demo.servlet.model.User;
@@ -34,8 +34,7 @@ public class UserDAOImlTest {
         Assertions.assertEquals(expectedUser, actualUser);
     }
 
-    @Test
-    @Disabled
+    @Ignore
     public void deleteUser() {
     }
 
