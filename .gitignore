@@ -1,0 +1,4 @@
+# Project exclude paths
+/target/
+servlet-demo.iml
+*.idea/

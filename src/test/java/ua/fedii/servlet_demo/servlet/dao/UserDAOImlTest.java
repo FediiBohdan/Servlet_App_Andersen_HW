@@ -12,7 +12,7 @@ public class UserDAOImlTest {
     @Test
     public void selectAllUsers() {
         int actualUserAmount = userDAO.selectAllUsers().size();
-        int expectedUserAmount = 4;
+        int expectedUserAmount = 5;
 
         Assertions.assertEquals(expectedUserAmount, actualUserAmount);
     }
@@ -23,7 +23,7 @@ public class UserDAOImlTest {
         userDAO.insertUser(new User("Taras", "Stepanenko", 25, "taras_s@mail.ua"));
         int currentUserListSize = initialUserListSize + 1;
 
-        Assertions.assertEquals(5, currentUserListSize);
+        Assertions.assertEquals(6, currentUserListSize);
     }
 
     @Test
